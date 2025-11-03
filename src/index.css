@@ -113,3 +113,21 @@ img {
   /* Hide scrollbars for touch carousels on mobile */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* === Text justification (global) === */
+p, li { 
+  text-align: justify;
+  text-justify: inter-word;   /* nicer spacing on supported browsers */
+}
+
+/* Optional utility if you want to force justify on any element */
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Bulleted list helper */
+.bullet-list { 
+  list-style: disc; 
+  padding-left: 1.25rem;      /* ≈ pl-5 */
+}
