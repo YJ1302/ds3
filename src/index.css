@@ -1,0 +1,89 @@
+/* Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Global behavior ---------- */
+
+/* Smooth anchor scrolling + space for the sticky header */
+:root {
+  --header-sm: 80px;   /* ~mt-20 */
+  --header-md: 96px;   /* ~mt-24 */
+  --sticky-top: var(--header-sm);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* default padding for small screens */
+  scroll-padding-top: var(--header-sm);
+}
+
+@media (min-width: 768px) {
+  html { scroll-padding-top: var(--header-md); }
+  :root { --sticky-top: var(--header-md); }
+}
+
+/* Base typography/background via Tailwind */
+body {
+  @apply bg-white text-gray-800 antialiased;
+}
+
+/* Prevent accidental horizontal scroll on mobile/desktop */
+body, #root {
+  overflow-x: hidden;
+}
+
+/* Slightly crisper images without forcing pixelation */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimizeQuality;
+}
+
+/* ---------- Utilities ---------- */
+
+/* Hide scrollbars (use on horizontal menus or carousels) */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE 10+ / Edge Legacy */
+  scrollbar-width: none;     /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome/Safari/Opera */
+}
+
+/* Optional: elevated card shadow (use class 'shadow-elevated') */
+.shadow-elevated {
+  box-shadow:
+    0 6px 24px rgba(0, 0, 0, 0.08),
+    0 2px  8px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- Marquee (optional global) ---------- */
+/* If you want to move the marquee CSS out of the component, you can use these: */
+@keyframes scrollX {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* shift by width of the first set */
+}
+
+/* Apply to the inner track: <div class="marquee-track"> */
+.marquee-track {
+  animation: scrollX var(--marquee-speed, 28s) linear infinite;
+  will-change: transform;
+}
+
+/* Pause the marquee while hovering (toggle this class) */
+.marquee-paused {
+  animation-play-state: paused;
+}
+
+/* ---------- Tables (compact look) ---------- */
+/* If you add class "table-compact" to a table, it will match the compact spec style */
+.table-compact thead th {
+  @apply bg-gray-50 text-gray-700 border-b;
+}
+.table-compact th,
+.table-compact td {
+  @apply py-2 px-3;
+}
+.table-compact tbody tr:not(:last-child) td {
+  @apply border-b;
+}
