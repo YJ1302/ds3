@@ -15,23 +15,23 @@ export const productData = {
 export const features: Feature[] = [
     {
         icon: React.createElement(TenGbeIcon),
-        title: "Red 10GbE de Alto Nivel",
-        description: "Incluye cuatro conexiones 10GbE para conectividad de alta velocidad a servidores y almacenamiento en red, eliminando cuellos de botella."
+        title: "Conectividad 10GbE",
+        description: "Cuatro puertos de alta velocidad para eliminar cuellos de botella."
     },
     {
         icon: React.createElement(CloudIcon),
-        title: "Apilamiento Gestionado en la Nube",
-        description: "Apila hasta cuatro switches 1960 y gestiónalos como una sola entidad a través de la app móvil Instant On o el portal web."
+        title: "Gestión en la Nube",
+        description: "Apila hasta 4 switches y adminístralos como uno solo desde la app."
     },
     {
         icon: React.createElement(StackingIcon),
-        title: "Implementación Simplificada",
-        description: "Usa la app móvil Instant On para una configuración guiada o la GUI web local. Una etiqueta extraíble con código QR simplifica la incorporación."
+        title: "Configuración Sencilla",
+        description: "Implementación rápida usando la app móvil y un código QR."
     },
     {
         icon: React.createElement(SecurityIcon),
-        title: "Seguridad Robusta",
-        description: "Protege tu red con funciones como VLAN, listas de control de acceso, 802.1X con servidor RADIUS y protección automática contra DoS."
+        title: "Seguridad Avanzada",
+        description: "Protección integrada con VLAN, ACLs, 802.1X y defensa contra DoS."
     }
 ];
 
