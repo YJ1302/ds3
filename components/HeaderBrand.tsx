@@ -13,13 +13,13 @@ import {
 } from "lucide-react";
 
 const categories = [
-  { label: "Switch Instant On", icon: Network, href: "#instant-on" },
-  { label: "Switch Aruba", icon: Network, href: "#switch-aruba" },
-  { label: "Access Point Aruba", icon: Wifi, href: "#ap-aruba" },
-  { label: "Servidores ProLiant", icon: Server, href: "#proliant" },
-  { label: "Transceivers y Fibra", icon: Cable, href: "#transceivers" },
-  { label: "Discos Duros", icon: HardDrive, href: "#discos" },
-  { label: "Fuentes de Poder", icon: BatteryCharging, href: "#power" },
+  { label: "Switch Instant On", icon: Network, href: "https://www.ds3comunicaciones.com/hp/aruba/switch_instantOn/precios_instantOn.html" },
+  { label: "Switch Aruba", icon: Network, href: "https://www.ds3comunicaciones.com/hp/aruba/switch_aruba/precios_switch_aruba.html" },
+  { label: "Access Point Aruba", icon: Wifi, href: "https://www.ds3comunicaciones.com/hp/aruba/ap_aruba/precios_ap_aruba.html" },
+  { label: "Servidores ProLiant", icon: Server, href: "https://www.ds3comunicaciones.com/hp/aruba/servidores/precios_servidores.html" },
+  { label: "Transceivers y Fibra", icon: Cable, href: "https://www.ds3comunicaciones.com/hp/aruba/transceiver/precios_transceiver.html" },
+  { label: "Discos Duros", icon: HardDrive, href: "https://www.ds3comunicaciones.com/hp/aruba/discos/precios_discos.html" },
+  { label: "Fuentes de Poder", icon: BatteryCharging, href: "https://www.ds3comunicaciones.com/hp/aruba/fuentesPoder/precios_fuentes.html" },
 ];
 
 export default function HeaderBrand() {
