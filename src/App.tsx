@@ -29,6 +29,8 @@ export default function App() {
             overview={productData.overview}
             images={galleryImages}
             features={features}
+            price={productData.price}
+            currencyLabel={productData.currencyLabel}
           />
           {/* Primero “También Disponible”… */}
           {/* @ts-ignore: allowing title prop */}

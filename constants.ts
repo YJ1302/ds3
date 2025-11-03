@@ -8,6 +8,8 @@ export const productData = {
     name: "Switch Aruba Instant On 1960",
     model: "24G 2XGT 2SFP+ (JL806A)",
     overview: "Switches Gigabit apilables, avanzados y de gestión inteligente, diseñados para pequeñas y medianas empresas en crecimiento. Fáciles de implementar, seguros y asequibles, escalan a medida que tu negocio crece.",
+    price: 767,                 // numeric for formatting
+  currencyLabel: "U$",        // matches the DS3 page
 };
 
 export const features: Feature[] = [

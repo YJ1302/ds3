@@ -37,6 +37,13 @@ export default function MobileAppShell() {
         <p className="text-sm font-semibold text-orange-600">{productData.model}</p>
         <h1 className="text-xl font-bold mt-1">{productData.name}</h1>
         <p className="text-gray-600 mt-2">{productData.overview}</p>
+      {typeof productData.price === "number" && (
+        <p className="mt-2 text-2xl font-bold">
+          <span className="text-gray-900">
+            {productData.currencyLabel}&nbsp;{productData.price.toLocaleString()}
+          </span>
+        </p>
+      )}
       </section>
 
       {/* 3) Features (compact cards) */}

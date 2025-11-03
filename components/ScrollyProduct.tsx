@@ -13,12 +13,16 @@ export default function ScrollyProduct({
   overview,
   images,
   features,
+  price,
+  currencyLabel = "U$",
 }: {
   productName: string;
   model: string;
   overview: string;
   images: Img[];
   features: Feature[];
+  price?: number;
+  currencyLabel?: string;
 }) {
   // choose exact images by basename
   const byBase = (base: string) =>
@@ -186,8 +190,22 @@ export default function ScrollyProduct({
           >
             <div>
               <p className="text-sm font-semibold text-orange-600">{model}</p>
-              <h1 className="mt-2 text-4xl font-extrabold leading-tight">{productName}</h1>
-              <p className="mt-4 text-gray-600">{overview}</p>
+
+              <h1 className="text-2xl md:text-3xl font-bold">
+                {productName}
+              </h1>
+
+              {/* ↓↓↓ NEW: price just under the title */}
+              {typeof price === "number" && (
+                <p className="mt-2 text-2xl md:text-3xl font-bold">
+                  <span className="text-gray-900">
+                    {currencyLabel}&nbsp;{price.toLocaleString()}
+                  </span>
+                </p>
+              )}
+              {/* ↑↑↑ NEW */}
+
+              <p className="mt-3 text-gray-600">{overview}</p>
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
