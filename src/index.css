@@ -18,6 +18,11 @@ html {
   scroll-padding-top: var(--header-sm);
 }
 
+ h1 { font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem); }
+  h2 { font-size: clamp(1.25rem, 1.0rem + 1.0vw, 1.75rem); }
+  h3 { font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.25rem); }
+  p, li { font-size: clamp(0.95rem, 0.90rem + 0.2vw, 1rem); }
+
 @media (min-width: 768px) {
   html { scroll-padding-top: var(--header-md); }
   :root { --sticky-top: var(--header-md); }
@@ -87,3 +92,24 @@ img {
 .table-compact tbody tr:not(:last-child) td {
   @apply border-b;
 }
+
+ img, video { max-width: 100%; height: auto; }
+
+  /* Handy container spacing if you use a .container wrapper anywhere */
+  .container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: clamp(0.75rem, 3vw, 1.25rem);
+  }
+
+  /* Wide tables scroll horizontally on small screens when wrapped in .table-wrap */
+  .table-wrap { overflow-x: auto; }
+
+  /* On tablets/desktops increase sticky offset */
+  @media (min-width: 768px){
+    :root{ --sticky-top: var(--header-md); }
+  }
+
+  /* Hide scrollbars for touch carousels on mobile */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
